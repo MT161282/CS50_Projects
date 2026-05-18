@@ -1,0 +1,73 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+<div class="calculator">
+
+<form method="post">
+<input name="expression" id="display" value="{{ expression or '' }}">
+
+<br>
+
+<button type="button" onclick="add('7')">7</button>
+<button type="button" onclick="add('8')">8</button>
+<button type="button" onclick="add('9')">9</button>
+<button type="button" onclick="add('/')">/</button>
+
+<br>
+
+<button type="button" onclick="add('4')">4</button>
+<button type="button" onclick="add('5')">5</button>
+<button type="button" onclick="add('6')">6</button>
+<button type="button" onclick="add('*')">*</button>
+
+<br>
+
+<button type="button" onclick="add('1')">1</button>
+<button type="button" onclick="add('2')">2</button>
+<button type="button" onclick="add('3')">3</button>
+<button type="button" onclick="add('-')">-</button>
+
+<br>
+
+<button type="button" onclick="add('0')">0</button>
+<button type="button" onclick="add('.')">.</button>
+<button type="submit">=</button>
+<button type="button" onclick="add('+')">+</button>
+
+<br>
+
+<!-- Scientific -->
+<button type="button" onclick="add('sqrt(')">√</button>
+<button type="button" onclick="add('sin(')">sin</button>
+<button type="button" onclick="add('cos(')">cos</button>
+<button type="button" onclick="add('tan(')">tan</button>
+
+<br>
+
+<button type="button" onclick="add('pi')">π</button>
+<button type="button" onclick="add('e')">e</button>
+
+<br>
+
+<button type="button" onclick="clearDisplay()">C</button>
+
+</form>
+
+{% if result %}
+<h3>Result: {{ result }}</h3>
+{% endif %}
+
+</div>
+
+<script>
+function add(val) {
+    document.getElementById("display").value += val;
+}
+
+function clearDisplay() {
+    document.getElementById("display").value = "";
+}
+</script>
+
+{% endblock %}
