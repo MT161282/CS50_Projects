@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+<h2>History</h2>
+
+<a href="/clear">Clear History</a>
+
+<ul>
+{% for row in data %}
+<li>{{ row.expression }} = {{ row.result }}</li>
+{% endfor %}
+</ul>
+
+{% endblock %}
