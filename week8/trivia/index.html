@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Trivia</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial;
+        }
+        button {
+            margin: 5px;
+            padding: 10px;
+        }
+    </style>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+
+            // Multiple Choice
+            let correct = document.querySelector('.correct');
+            correct.addEventListener('click', function() {
+                correct.style.backgroundColor = 'green';
+                document.querySelector('#mc-feedback').innerHTML = "Correct!";
+            });
+
+            let incorrects = document.querySelectorAll('.incorrect');
+            for (let i = 0; i < incorrects.length; i++) {
+                incorrects[i].addEventListener('click', function() {
+                    incorrects[i].style.backgroundColor = 'red';
+                    document.querySelector('#mc-feedback').innerHTML = "Incorrect";
+                });
+            }
+
+            // Free Response
+            document.querySelector('#check').addEventListener('click', function() {
+                let input = document.querySelector('#answer');
+                if (input.value.toLowerCase() === 'bangladesh') {
+                    input.style.backgroundColor = 'green';
+                    document.querySelector('#fr-feedback').innerHTML = "Correct!";
+                } else {
+                    input.style.backgroundColor = 'red';
+                    document.querySelector('#fr-feedback').innerHTML = "Incorrect";
+                }
+            });
+
+        });
+    </script>
+</head>
+
+<body>
+
+<h1>Trivia Game</h1>
+
+<h2>Part 1: Multiple Choice</h2>
+<h3>Which country is in South Asia?</h3>
+
+<button class="incorrect">USA</button>
+<button class="incorrect">UK</button>
+<button class="correct">Bangladesh</button>
+<button class="incorrect">Canada</button>
+
+<p id="mc-feedback"></p>
+
+<h2>Part 2: Free Response</h2>
+<h3>What is your country name?</h3>
+
+<input id="answer" type="text">
+<button id="check">Check Answer</button>
+
+<p id="fr-feedback"></p>
+
+</body>
+</html>
