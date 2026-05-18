@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Birthdays</title>
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+        }
+        table {
+            margin: auto;
+            border-collapse: collapse;
+            width: 60%;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid black;
+        }
+        th {
+            background-color: lightblue;
+        }
+        button {
+            padding: 5px 10px;
+            margin: 2px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>🎂 Birthdays</h1>
+
+    <!-- Add Form -->
+    <form action="/" method="post">
+        <input name="name" placeholder="Name">
+        <input name="month" placeholder="Month" type="number">
+        <input name="day" placeholder="Day" type="number">
+        <button type="submit">Add</button>
+    </form>
+
+    <h2>All Birthdays</h2>
+
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Birthday</th>
+            <th>Action</th>
+        </tr>
+
+        {% for b in birthdays %}
+        <tr>
+            <td>{{ b.name }}</td>
+            <td>{{ b.month }}/{{ b.day }}</td>
+            <td>
+                <a href="/edit/{{ b.id }}">
+                    <button>Edit</button>
+                </a>
+                <a href="/delete/{{ b.id }}">
+                    <button>Delete</button>
+                </a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+
+</body>
+</html>
