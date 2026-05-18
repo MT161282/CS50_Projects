@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+
+{% block main %}
+  <h1>Quote</h1>
+  <p>
+    A share of <strong>{{ quote["symbol"] }}</strong> costs
+    <strong>{{ quote["price"] | usd }}</strong>.
+  </p>
+  <a class="btn btn-primary" href="/buy">Buy</a>
+{% endblock %}
