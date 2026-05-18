@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Edit Birthday</title>
+</head>
+<body style="text-align:center; font-family: Arial;">
+
+    <h1>Edit Birthday</h1>
+
+    <form method="post">
+        <input name="name" value="{{ birthday.name }}">
+        <input name="month" type="number" value="{{ birthday.month }}">
+        <input name="day" type="number" value="{{ birthday.day }}">
+        <button type="submit">Update</button>
+    </form>
+
+    <br>
+    <a href="/">⬅ Back</a>
+
+</body>
+</html>
