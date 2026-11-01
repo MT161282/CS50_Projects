@@ -1,8 +1,8 @@
 # Harvard CS50x: Computer Science & Software Engineering Portfolio
 
-This repository contains my solutions to the problem sets and the final capstone project completed as part of **CS50x: Introduction to Computer Science** offered by **Harvard University**[cite: 1].
+This repository contains my solutions to the problem sets and the final capstone project completed as part of **CS50x: Introduction to Computer Science** offered by **Harvard University**
 
-The coursework covers low-level systems programming, data structures, algorithm optimization, database management, and full-stack web development[cite: 1].
+The coursework covers low-level systems programming, data structures, algorithm optimization, database management, and full-stack web development.
 
 ---
 
@@ -41,8 +41,8 @@ The problem sets are organized by academic weeks representing progressive comple
 
 ## 📜 Course Certificate & Verification
 
-* **Course:** CS50x: Introduction to Computer Science[cite: 1]
-* **Institution:** Harvard University[cite: 1]
+* **Course:** CS50x: Introduction to Computer Science.
+* **Institution:** Harvard University.
 * **Instructor:** Prof. David J. Malan
 * **Verification Link:** [Harvard CS50x Certificate Verification](https://cs50.harvard.edu/certificates/fb28065f-34d7-46b8-9da9-99e1c3336b3c)
 
@@ -50,7 +50,7 @@ The problem sets are organized by academic weeks representing progressive comple
 
 ## 💡 Tools & Acknowledgements
 
-* **Core Implementation:** Developed according to Harvard University's CS50x curriculum specifications[cite: 1].
+* **Core Implementation:** Developed according to Harvard University's CS50x curriculum specifications.
 * **AI Assistance & Workflow:** Utilized AI assistants (such as CS50 Duck Debugger) for code optimization, debugging, and edge-case testing.
 
 ---
