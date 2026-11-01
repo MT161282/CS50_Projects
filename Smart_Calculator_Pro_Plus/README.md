@@ -56,8 +56,6 @@ To run this project locally, follow these steps:
    cd project
 3. Run the Flask application:
    flask run
-4. Open your browser and visit:
-  http://127.0.0.1:5000/
 
 ## How It Works
 
